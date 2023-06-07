@@ -1,17 +1,15 @@
 <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
-    <div class="form-title">
-        <h4>User Create</h4>
-      </div>
-    <div class="form-group">
-      <label for="name">Nom</label>
-      <input type="text" id="name" formControlName="name" required>
-    </div>
-  
-    <div class="form-group">
-      <label for="email">Email</label>
-      <input type="email" id="email" formControlName="email" required>
-    </div>
-    <input type="hidden" id="id" formControlName="id" required>
+  <div class="form-title">
+    <h4>User Create</h4>
+  </div>
+  <div class="form-group">
+    <label for="name">Nom</label>
+    <input type="text" id="name" formControlName="name" required />
+  </div>
 
-    <button type="submit">Create</button>
-  </form>
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input type="email" id="email" formControlName="email" required />
+  </div>
+  <button type="submit">Create</button>
+</form>

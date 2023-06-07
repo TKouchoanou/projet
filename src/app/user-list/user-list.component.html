@@ -1,13 +1,11 @@
-<div   class="user-list">
-    <div  (click)="onClick(user)" class="user-card" *ngFor="let user of users">
-      <div class="user-avatar">
-        <img src="assets/avatar.png" alt="User Avatar">
-      </div>
-      <div class="user-info">
-        <h4>{{ user.name }}</h4>
-        <p>{{ user.email }}</p>
-      </div>
+<div class="user-list">
+  <div (click)="onClick(user)" class="user-card" *ngFor="let user of users">
+    <div class="user-avatar">
+      <img [src]="user.img" alt="User Avatar" />
+    </div>
+    <div class="user-info">
+      <h4>{{ user.name }}</h4>
+      <p>{{ user.email }}</p>
     </div>
   </div>
-  
-  
+</div>
