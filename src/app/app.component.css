@@ -1,0 +1,44 @@
+
+/*
+.container {
+    display: flex;
+    width: 100%;
+  }
+  
+  .container > app-user-list,
+  .container > app-user-edit {
+    flex-basis: 50%;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  
+  */
+  
+  .container {
+    display: flex;
+    width: 100%;
+  }
+  
+  .container > app-user-list {
+    flex-basis: 50%;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  
+  .sub-container {
+    display: flex;
+    flex-direction: column; 
+    flex-basis: 100%;
+  }
+  
+  .sub-container > app-user-edit,
+  .sub-container > app-user-add {
+    flex-basis: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  
+ 
+  
+
+  

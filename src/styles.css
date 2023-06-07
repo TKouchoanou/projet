@@ -1,1 +1,41 @@
 /* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+form {
+  display: grid;
+  gap: 10px;
+}
+.form-group {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 10px;
+}
+
+label {
+  text-align: right;
+}
+.form-title {
+  grid-column: 1 / -1; /* Span sur toutes les colonnes */
+  text-align: center;
+}
+.form-title h4 {
+  font-weight: bold;
+}
+
+input {
+  width: 50%;
+  padding: 10px;
+  margin-left: 0; /* Ajout de la marge à gauche */
+}
+
+button {
+  justify-self: center;
+}

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { User } from './user.interface';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'project';
+   editUser:User={ id: 0, name: '...', email: '...'}
+
+   constructor() {}
+   
+  onSelectedUser(user:User) {
+    this.editUser=user; 
+    }
 }
