@@ -8,7 +8,9 @@ export class UserService {
   constructor() {}
 
   addUser(user: Omit<User, 'id'>): User {
-    const newUser = { id: 1, ...user };
+    const id = this.generateUniqueId();
+    const newUser = { id, ...user };
+    console.log('new user' + newUser);
     this.users$.next([...this.users$.value, newUser]);
     return newUser;
   }
@@ -33,5 +35,12 @@ export class UserService {
 
   getAllUserObservable(): Observable<User[]> {
     return this.users$;
+  }
+
+  private generateUniqueId(): number {
+    const users = this.users$.value;
+    const maxId =
+      users.length > 0 ? Math.max(...users.map((user) => user.id)) : 0;
+    return maxId + 1;
   }
 }
